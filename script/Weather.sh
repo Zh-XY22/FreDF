@@ -14,8 +14,11 @@ python -u main.py \
   --label_len 48 \
   --pred_len 96 \
   --e_layers 1 \
+  --learning_rate 0.001\
   --d_model 128\
   --is_emb True\
+  --embed 'learned'\
+  --dropout 0\
   --c_out 21 \
   --des 'Exp' \
   --itr 1

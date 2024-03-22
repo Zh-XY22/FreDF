@@ -1,13 +1,11 @@
 import os
 import torch
-from models import FEDformer, FiLM, FreDF
+from models import FreDF
 
 class Exp_Basic(object):
     def __init__(self, args):
         self.args = args
         self.model_dict = {
-            'FEDformer': FEDformer,
-            'FiLM': FiLM,
             'FreDF':FreDF
         }
         self.device = self._acquire_device()

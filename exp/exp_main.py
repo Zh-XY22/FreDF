@@ -1,7 +1,5 @@
 import math
-
 import torch.optim as optim
-from torch.optim.lr_scheduler import LambdaLR
 
 from data_provider.data_factory import data_provider
 from exp.exp_basic import Exp_Basic
@@ -85,7 +83,7 @@ class Exp_Main(Exp_Basic):
         return total_loss
 
     def train(self, setting):
-        print("parameters：",self.count_parameters())
+        print("parameters：", self.count_parameters())
         train_data, train_loader = self._get_data(flag='train')
         vali_data, vali_loader = self._get_data(flag='val')
         test_data, test_loader = self._get_data(flag='test')
